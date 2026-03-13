@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div id="menu-container"></div>
+
+    <section class="relative h-[100vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/Banner_ChinhRCLongChau8.jpg.webp&quot;)">
+        <div
+            class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <div class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer">
+            <img src="assets/logo-rice.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </div>
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+    </section>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div>
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <div class="bg-[#fdf9f0] p-8 md:p-">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h1
+                    class="heading-font text-black hover:text-[#e5a643] text-2xl md:text-4xl leading-relaxed transition-colors duration-300 cursor-default">
+                    Rice City Long Biên là dự án mới nhất đánh dấu sự trở lại của BIC Việt Nam liên danh với Công ty CP
+                    Him Lam Thủ Đô với dòng sản phẩm NOXH chất lượng cao mang thương hiệu Rice City. Sở hữu vị thế "Minh
+                    đường tụ thủy" kế bên quần thể công viên Hồ Ngọc Thụy, hội tụ những giá trị sống ưu việt, dự án hứa
+                    hẹn là chốn an cư lý tưởng dành cho các cư dân tương lai.
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-12 border-t border-gray-200 pt-8">
+
+                <div class="space-y-8">
+                    <div class="border-l-2 border-[#b8a77a] pl-4">
+                        <h3 class="text-[#b8a77a] text-base font-semibold uppercase tracking-wider mb-2">Tên thương mại
+                            dự
+                            án</h3>
+                        <p class="text-gray-800 font-medium">NOXH chất lượng cao Rice City Long Biên</p>
+                    </div>
+                    <div class="border-l-2 border-[#b8a77a] pl-4">
+                        <h3 class="text-[#b8a77a] text-basefont-semibold uppercase tracking-wider mb-2">Vị trí</h3>
+                        <p class="text-gray-800 font-medium leading-snug">Khu nhà ở xã hội Thượng Thanh, Phường Bồ Đề,
+                            TP. Hà Nội</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="border-l-2 border-[#b8a77a] pl-4">
+                        <h3 class="text-[#b8a77a] text-base font-semibold uppercase tracking-wider mb-2">Tổng diện tích
+                        </h3>
+                        <p class="text-gray-800 font-medium">60.355m2</p>
+                    </div>
+                    <div class="border-l-2 border-[#b8a77a] pl-4">
+                        <h3 class="text-[#b8a77a] text-base font-semibold uppercase tracking-wider mb-2">Diện tích xây
+                            dựng
+                        </h3>
+                        <p class="text-gray-800 font-medium">9.394m2</p>
+                    </div>
+                    <div class="border-l-2 border-[#b8a77a] pl-4">
+                        <h3 class="text-[#b8a77a] text-base font-semibold uppercase tracking-wider mb-2">Quy mô</h3>
+                        <p class="text-gray-800 font-medium">3 Tòa CT1 - CT2 - CT3</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="border-l-2 border-[#e5a643] pl-4">
+                        <h3 class="text-[#b8a77a] text-base font-semibold uppercase tracking-wider mb-2">Tổng căn hộ
+                        </h3>
+                        <p class="text-gray-800 font-medium">1980 căn</p>
+                    </div>
+                    <div class="border-l-2 border-[#e5a643] pl-4">
+                        <h3 class="text-[#b8a77a] text-base font-semibold uppercase tracking-wider mb-2">Loại căn hộ
+                        </h3>
+                        <p class="text-gray-800 font-medium">1PN | 2PN | 3PN</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="assets/home2.webp" alt="Banner" class="w-full h-auto object-cover" />
+    </div>
+
+    <div class="bg-[#fdf9f0] p-8 md:p-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h2 class="heading-font text-[#b5a381] text-4xl md:text-5xl leading-tight mb-6">
+                    Tâm điểm kết nối<br>
+                    Phong thủy thịnh vượng
+                </h2>
+                <p class="text-black hover:text-[#e5a643] text-lg md:text-xl font-medium max-w-3xl leading-relaxed">
+                    Tọa lạc tại phía Đông Hà Nội – Trung tâm mới sôi động bậc nhất thủ đô, Rice City Long Biên sở hữu
+                    kết nối giao thông thuận tiện với hệ thống cơ sở hạ tầng được quy hoạch bài bản và quần thể hệ sinh
+                    thái hiện hữu.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div class="space-y-4">
+                    <div class="h-16 flex items-end mb-6">
+                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h3
+                        class="text-[#b5a381] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">
+                        Tham quan giải trí</h3>
+                    <ul class="text-[#f2a12e] space-y-2 text-sm md:text-base">
+                        <li>Đối diện Hồ Ngọc Thụy 15ha (quy hoạch)</li>
+                        <li>Công viên Hồ Ngọc Thụy hiện hữu 200m</li>
+                        <li>Vinhomes Cổ Loa 3,5km</li>
+                        <li>Disneyland Đông Anh 4km</li>
+                        <li>Hồ Gươm - Phố cổ 5km</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="h-16 flex items-end mb-6">
+                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                            <path d="M7 15h10M9 19h6M5 11h14l1 7H4l1-7zM6 11V5a2 2 0 012-2h8a2 2 0 012 2v6" />
+                        </svg>
+                    </div>
+                    <h3
+                        class="text-[#b5a381] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">
+                        Giao thông công cộng</h3>
+                    <ul class="text-[#f2a12e] space-y-2 text-sm md:text-base">
+                        <li>Ga Gia Lâm 1km</li>
+                        <li>Bến xe Gia Lâm 2km</li>
+                        <li>Sân bay Nội Bài 20km</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="h-16 flex items-end mb-6">
+                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5zM6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                        </svg>
+                    </div>
+                    <h3
+                        class="text-[#b5a381] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">
+                        Giáo dục</h3>
+                    <ul class="text-[#f2a12e] space-y-2 text-sm md:text-base">
+                        <li>Trường THCS Ngọc Thụy 1km</li>
+                        <li>Trường THPT Nguyễn Gia Thiều 1,5km</li>
+                        <li>Trường Tiểu học Gia Thụy 2km</li>
+                        <li>Trường THPT Lý Thường Kiệt 3km</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="h-16 flex items-end mb-6">
+                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5">
+                            <path
+                                d="M19 14c1.5 0 2.8 1.3 2.8 2.8 0 3.2-3.8 5.2-3.8 5.2s-3.8-2-3.8-5.2c0-1.5 1.3-2.8 2.8-2.8z" />
+                            <path d="M12 22H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v4" />
+                            <path d="M7 11h5m-5 4h2M12 3v4" />
+                        </svg>
+                    </div>
+                    <h3
+                        class="text-[#b5a381] font-bold text-sm uppercase tracking-widest border-b border-gray-200 pb-2">
+                        Y tế</h3>
+                    <ul class="text-[#f2a12e] space-y-2 text-sm md:text-base">
+                        <li>BV Đường sắt 1,5km</li>
+                        <li>BV đa khoa Tâm Anh 3km</li>
+                        <li>BV đa khoa Đức Giang 4km</li>
+                        <li>BV Quốc tế Việt Đức 4km</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img src="assets/home3.webp" alt="Banner" class="w-full h-auto object-cover" />
+    </div>
+    <section class="bg-[#bda885] min-h-[600px] flex flex-col items-center px-8 md:px-20 py-16">
+        <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-20">
+
+            <div class="max-w-2xl relative z-10">
+                <h3 class="heading-font text-black text-3xl md:text-6xl leading-tight mb-8">
+                    Mặt bằng không gian sống xanh, sạch và tràn đầy năng lượng tích cực
+                </h3>
+
+                <p class="body-font text-black/70 text-lg md:text-xl leading-relaxed max-w-xl">
+                    Không chỉ là dự án NOXH chất lượng cao, kiến tạo những giá trị sống đích thực mà Rice City Long Biên
+                    còn hướng đến là dự án NOXH sinh thái với phong cách thiết kế thông minh và gần gũi với thiên
+                    nhiên...
+                </p>
+            </div>
+
+            <div class="flex flex-col space-y-4 w-full md:w-96 shrink-0">
+                <a href="#"
+                    class="group border border-white flex items-center justify-between px-6 py-4 text-white uppercase tracking-widest text-sm transition-all hover:bg-white/10">
+                    Xem mặt bằng căn
+                    <span class="transform transition-transform group-hover:translate-x-2">→</span>
+                </a>
+
+                <a href="#"
+                    class="group border border-white flex items-center justify-between px-6 py-4 text-white uppercase tracking-widest text-sm transition-all hover:bg-white/10">
+                    Căn hộ mẫu
+                    <span class="transform transition-transform group-hover:translate-x-2">→</span>
+                </a>
+
+                <a href="#"
+                    class="group border border-white flex items-center justify-between px-6 py-4 text-white uppercase tracking-widest text-sm transition-all hover:bg-white/10">
+                    Xem bản đồ tiện ích
+                    <span class="transform transition-transform group-hover:translate-x-2">→</span>
+                </a>
+            </div>
+
+        </div>
+        <div class=" py-10 w-full">
+            <div class="w-full mx-auto px-4 md:px-12">
+                <div class="relative">
+                    <!-- Khung nhìn -->
+                    <div class="overflow-hidden">
+                        <div id="slider-track" class="flex transition-transform duration-500 ease-in-out">
+                            <div class="slide w-full md:w-1/3 shrink-0 px-2">
+                                <div class="aspect-[4/3] overflow-hidden rounded-md">
+                                    <img src="assets/side1.webp" alt="Gallery 1"
+                                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                                </div>
+                            </div>
+
+                            <div class="slide w-full md:w-1/3 shrink-0 px-2">
+                                <div class="aspect-[4/3] overflow-hidden rounded-md">
+                                    <img src="assets/side2.webp" alt="Gallery 2"
+                                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                                </div>
+                            </div>
+
+                            <div class="slide w-full md:w-1/3 shrink-0 px-2">
+                                <div class="aspect-[4/3] overflow-hidden rounded-md">
+                                    <img src="assets/side3.webp" alt="Gallery 3"
+                                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                                </div>
+                            </div>
+
+                            <div class="slide w-full md:w-1/3 shrink-0 px-2">
+                                <div class="aspect-[4/3] overflow-hidden rounded-md">
+                                    <img src="assets/side4.webp" alt="Gallery 4"
+                                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nút trái -->
+                    <button id="prevBtn" type="button"
+                        class="absolute left-1 md:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 shadow-lg hover:bg-[#e5a643] hover:text-white transition z-20">
+                        <span class="text-2xl leading-none">‹</span>
+                    </button>
+
+                    <!-- Nút phải -->
+                    <button id="nextBtn" type="button"
+                        class="absolute right-1 md:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 shadow-lg hover:bg-[#e5a643] hover:text-white transition z-20">
+                        <span class="text-2xl leading-none">›</span>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+            const track = document.getElementById("slider-track");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            const dotsContainer = document.getElementById("dots");
+
+            const originalSlides = Array.from(track.querySelectorAll(".slide"));
+            const totalSlides = originalSlides.length;
+
+            let perView = getPerView();
+            let currentIndex = perView;
+            let isAnimating = false;
+
+            function getPerView() {
+                return window.innerWidth >= 768 ? 3 : 1;
+            }
+
+            function buildSlider() {
+                perView = getPerView();
+
+                track.innerHTML = "";
+
+                const headClones = originalSlides
+                    .slice(-perView)
+                    .map((slide) => slide.cloneNode(true));
+
+                const tailClones = originalSlides
+                    .slice(0, perView)
+                    .map((slide) => slide.cloneNode(true));
+
+                headClones.forEach((slide) => track.appendChild(slide));
+                originalSlides.forEach((slide) => track.appendChild(slide.cloneNode(true)));
+                tailClones.forEach((slide) => track.appendChild(slide));
+
+                currentIndex = perView;
+
+                track.classList.remove("transition-transform");
+                moveTo(currentIndex, false);
+
+                requestAnimationFrame(() => {
+                    track.classList.add("transition-transform");
+                });
+
+                renderDots();
+                updateDots();
+            }
+
+            function getSlideWidth() {
+                const firstSlide = track.children[0];
+                return firstSlide ? firstSlide.getBoundingClientRect().width : 0;
+            }
+
+            function moveTo(index, animate = true) {
+                if (!animate) {
+                    track.classList.remove("transition-transform");
+                } else {
+                    track.classList.add("transition-transform");
+                }
+
+                const slideWidth = getSlideWidth();
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            function goNext() {
+                if (isAnimating) return;
+                isAnimating = true;
+                currentIndex++;
+                moveTo(currentIndex, true);
+                updateDots();
+            }
+
+            function goPrev() {
+                if (isAnimating) return;
+                isAnimating = true;
+                currentIndex--;
+                moveTo(currentIndex, true);
+                updateDots();
+            }
+
+            function renderDots() {
+                dotsContainer.innerHTML = "";
+
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement("button");
+                    dot.type = "button";
+                    dot.className =
+                        "w-10 h-1 rounded bg-gray-300 transition-all duration-300";
+                    dot.dataset.index = i;
+
+                    dot.addEventListener("click", () => {
+                        if (isAnimating) return;
+                        isAnimating = true;
+                        currentIndex = perView + i;
+                        moveTo(currentIndex, true);
+                        updateDots();
+                    });
+
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll("button");
+                const activeIndex =
+                    ((currentIndex - perView) % totalSlides + totalSlides) % totalSlides;
+
+                dots.forEach((dot, index) => {
+                    if (index === activeIndex) {
+                        dot.className =
+                            "w-10 h-1 rounded bg-[#e5a643] transition-all duration-300";
+                    } else {
+                        dot.className =
+                            "w-10 h-1 rounded bg-gray-300 transition-all duration-300";
+                    }
+                });
+            }
+
+            track.addEventListener("transitionend", () => {
+                if (currentIndex >= totalSlides + perView) {
+                    currentIndex = currentIndex - totalSlides;
+                    moveTo(currentIndex, false);
+                }
+
+                if (currentIndex < perView) {
+                    currentIndex = currentIndex + totalSlides;
+                    moveTo(currentIndex, false);
+                }
+
+                updateDots();
+                isAnimating = false;
+            });
+
+            prevBtn.addEventListener("click", goPrev);
+            nextBtn.addEventListener("click", goNext);
+
+            let resizeTimeout;
+            window.addEventListener("resize", () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    buildSlider();
+                }, 150);
+            });
+
+            window.addEventListener("load", buildSlider);
+        </script>
+    </section>
+
+    <div class=" py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-semibold text-center text-[#b09364] mb-12">
+                Dịch vụ vận hành "may đo" theo cuộc sống của bạn
+            </h2>
+
+            <!-- First row (2 items) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-12">
+                <!-- First Item -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden flex">
+                    <img src="assets/image1.jpg.webp" alt="Tăng hạng cơ năng" class="w-1/2 h-[300px] object-cover" />
+                    <div class="p-6 flex-1">
+                        <h3 class="font-semibold text-xl text-[#444] mb-3">Tăng hạng cơ năng</h3>
+                        <p class="text-sm text-gray-600">
+                            Tối hưu dịch vụ cuốn xe để thay đổi ngày lễ hàng, diện tích phục vụ 36m².
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Second Item -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden flex">
+                    <img src="assets/image2.jpg.webp" alt="Siêu thị F-Mart" class="w-1/2 h-[300px] object-cover" />
+                    <div class="p-6 flex-1">
+                        <h3 class="font-semibold text-xl text-[#444] mb-3">Siêu thị F-Mart</h3>
+                        <p class="text-sm text-gray-600">
+                            Siêu thị hiện đại tại khu đô thị Rice City. Dành mua sắm hàng hóa đa dạng, phục vụ thiết bị
+                            gia đình, thực phẩm sạch, thiết kế hiện đại, cửa sổ vườn mini.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second row (2 items) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                <!-- Third Item -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden flex">
+                    <img src="assets/image3.jpg.webp" alt="Tư vấn và hoàn thiện nội thất"
+                        class="w-1/2 h-[300px] object-cover" />
+                    <div class="p-6 flex-1">
+                        <h3 class="font-semibold text-xl text-[#444] mb-3">Tư vấn và hoàn thiện nội thất</h3>
+                        <p class="text-sm text-gray-600">
+                            Liên hệ với chúng tôi, bạn sẽ nhận được những tư vấn hợp lý, tiện ích, hóa đơn rõ ràng để có
+                            nội thất tốt nhất trong quần cư.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Fourth Item -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden flex">
+                    <img src="assets/image4.jpg.webp" alt="Quản gia phục vụ" class="w-1/2 h-[300px] object-cover" />
+                    <div class="p-6 flex-1">
+                        <h3 class="font-semibold text-xl text-[#444] mb-3">"Quản gia" phục vụ theo nhu cầu</h3>
+                        <p class="text-sm text-gray-600">
+                            Dịch vụ Quản lý: Lịch trình dịch vụ thiết kế thực tế, phục vụ quản lý như cửa hàng, dịch vụ
+                            nhà ở, hay các nhu cầu đặc biệt, giảm giá cho cư dân.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-8 md:p-16">
+
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-2xl md:text-3xl font-bold text-[#1a365d] uppercase tracking-wider mb-12">
+                Tin tức
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <div
+                    class="group cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/news1.jpg" alt="News"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">
+                            Thông báo!</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                            Ngày 25/01/2026, Công ty cổ phần BIC đã gửi e-mail hướng dẫn hoàn thiện đơn đăng ký và các
+                            thủ tục khác liên quan phục vụ việc ký hợp đồng Mua bán nhà ở xã hội tòa CT1 Rice City Long
+                            Biên
+                        </p>
+                        <div class="flex items-center text-gray-400 text-xs">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            26/01/2026
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+
+                    <div class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                        <div class="sm:w-48 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+                            <img src="assets/news2.jpg" alt="Thumb"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex flex-col justify-between">
+                            <h4
+                                class="font-bold text-gray-800 leading-snug group-hover:text-blue-700 transition-colors">
+                                Kính gửi Quý khách hàng!</h4>
+                            <p class="text-gray-500 text-sm line-clamp-2">Chúng tôi chân thành cảm ơn sự quan tâm của
+                                Quý khách hàng đến dự án Rice City Long Biên.</p>
+                            <div class="flex items-center text-gray-400 text-xs mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                05/11/2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                        <div class="sm:w-48 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+                            <img src="assets/news3.jpg" alt="Thumb"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex flex-col justify-between">
+                            <h4
+                                class="font-bold text-gray-800 leading-snug uppercase group-hover:text-blue-700 transition-colors">
+                                Lên án hành vi phá hoại, tấn công mạng vào hệ thống...</h4>
+                            <p class="text-gray-500 text-sm line-clamp-2">Ngày 09 tháng 10 năm 2025 – Công ty Cổ phần
+                                BIC Việt Nam, đại diện Liên danh Công ty cổ phần Him Lam Thủ Đô...</p>
+                            <div class="flex items-center text-gray-400 text-xs mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                10/10/2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                        <div class="sm:w-48 h-32 flex-shrink-0 overflow-hidden rounded-lg">
+                            <img src="assets/news4.jpg" alt="Thumb"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex flex-col justify-between">
+                            <h4
+                                class="font-bold text-gray-800 leading-snug uppercase group-hover:text-blue-700 transition-colors">
+                                Nguyên nhân giá NOXH năm 2025 biến động tăng, do...</h4>
+                            <p class="text-gray-500 text-sm line-clamp-2">Những ngày cuối năm, chúng ta đang chứng kiến
+                                cuộc chạy đua về giá của các dự án nhà ở xã hội (NOXH)...</p>
+                            <div class="flex items-center text-gray-400 text-xs mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                07/10/2025
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-16 flex justify-center">
+                <button
+                    class="bg-[#222] text-white px-10 py-3 font-bold uppercase tracking-widest hover:bg-black transition-colors rounded-sm">
+                    Xem thêm
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <div id="footer-container"></div>
+</body>
+
+<script src="main.js" defer></script>
+
+</html>
