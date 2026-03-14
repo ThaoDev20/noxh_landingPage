@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rice City Long Châu - Tiến độ dự án</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/baner-tin-tuc-longchau.jpg&quot;)">
+        <div
+            class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="home.html">
+            <img src="assets/logo-rice.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a>
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class="text-white text-sm md:text-base font-bold leading-snug">
+                Home /Tin tức
+            </p>
+            <p class="text-white text-xl md:text-3xl font-bold leading-snug mt-4 md:mt-6">
+                Tin Tức
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div>
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] py-10 font-sans border-t border-gray-200">
+        <div class="max-w-[980px] mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news1.jpg" alt="Thông báo" class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />04/11
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 uppercase mb-2">
+                            Thông báo!
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Mời quý khách hàng theo dõi các thông tin chính thức cập nhật mới nhất về thủ tục
+                            mua bán và quy trình đăng ký mua nhà ở xã hội tại Rice City Long Châu.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news2.jpg" alt="Kính gửi Quý khách hàng"
+                            class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />04/11
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 uppercase mb-2">
+                            Kính gửi Quý khách hàng!
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Chúng tôi trân trọng cập nhật những thông tin nổi bật liên quan tới dự án Rice City
+                            Long Châu tới Quý khách.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news3.jpg" alt="Lên án hành vi phá hoại"
+                            class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />04/10
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 uppercase mb-2">
+                            Lên án hành vi phá hoại, tán công mạng vào hệ thống thu hồ sơ online dự án nhà ở xã hội
+                            Rice City Long Châu Hà Nội
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Hành vi cố ý xâm nhập và gây rối hệ thống tiếp nhận hồ sơ điện tử cần được ngăn chặn,
+                            xử lý nghiêm theo quy định.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news4.jpg" alt="Nguyên nhân giá NOXH năm 2025"
+                            class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />07/31
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 uppercase mb-2">
+                            Nguyên nhân giá NOXH năm 2025 biến động tăng, do chính sách hay do tác động từ giá
+                            chung cư tại trường...
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Phân tích các yếu tố tác động tới mặt bằng giá nhà ở xã hội và xu hướng biến động tại
+                            thị trường Hà Nội.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news1.jpg" alt="Công bố mở đợt bán" class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />03/26
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 mb-2">
+                            Công bố công khai kế hoạch tiếp nhận hồ sơ đăng ký mua, thuê mua nhà ở xã hội đợt đầu:
+                            Khu nhà ở xã hội Thượng Thanh và đấu nối hạ tầng...
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Thông tin về thời gian, địa điểm và đối tượng tiếp nhận hồ sơ được công khai minh bạch
+                            theo đúng quy định.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news2.jpg" alt="Khách hàng cần lưu ý gì"
+                            class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />03/19
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 mb-2">
+                            Khách hàng cần lưu ý gì khi nộp hồ sơ mua NOXH trong năm 2025?
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Tổng hợp các giấy tờ, điều kiện và mốc thời gian quan trọng để người mua chuẩn bị hồ
+                            sơ đầy đủ, đúng quy định.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news3.jpg" alt="Nhiều dự án NOXH tăng giá"
+                            class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />07/16
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 mb-2">
+                            Nhiều dự án NOXH tăng giá bán do giá vật liệu và nhân công leo thang - Khách hàng cần
+                            lưu ý điều gì?
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Những thay đổi của chi phí đầu vào đang ảnh hưởng mạnh tới giá thành phát triển dự án
+                            nhà ở xã hội.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bg-white border border-gray-200 overflow-hidden">
+                    <div class="relative">
+                        <img src="assets/news4.jpg" alt="Người mua nhà ở xã hội"
+                            class="w-full h-[260px] object-cover" />
+                        <div
+                            class="absolute top-3 left-3 bg-[#cdb892] text-white text-[11px] leading-tight px-3 py-2 font-semibold">
+                            2025<br />03/19
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-[14px] font-bold text-gray-900 mb-2">
+                            Người mua nhà ở xã hội cần sử dụng đúng mục đích: Tránh mất nhà, mất tiền vì vi phạm
+                        </h3>
+                        <p class="text-[12px] text-gray-600 leading-relaxed mb-4">
+                            Một số quy định quan trọng về điều kiện sử dụng nhà ở xã hội mà người mua cần nắm rõ
+                            để tránh sai phạm.
+                        </p>
+                        <a href="#" class="text-[12px] text-gray-500 border-b border-gray-400 inline-block">
+                            Chi tiết
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

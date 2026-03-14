@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rice City Long Châu - Tiến độ dự án</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/bgB.jpg.webp&quot;)">
+        <div
+            class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="home.html">
+            <img src="assets/logo-rice.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a>
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class="text-white text-sm md:text-base font-bold leading-snug">
+                Home /Hướng dẫn khách hàng hồ sơ /Q&A DỰ ÁN NHÀ Ở XÃ HỘI CHẤT LƯỢNG
+                CAO RICE CITY LONG CHÂU
+            </p>
+            <p class="text-white text-xl md:text-3xl font-bold leading-snug mt-4 md:mt-6">
+                Q&A DỰ ÁN NHÀ Ở XÃ HỘI CHẤT LƯỢNG CAO RICE CITY LONG CHÂU
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div>
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] py-10 font-sans border-t border-gray-200">
+        <div class="max-w-300 mx-auto md:px-12.5 px-6 py-10   ">
+
+            <h2 class="text-center font-bold text-xl text-gray-900 mb-8">
+                Q&A DỰ ÁN NHÀ Ở XÃ HỘI CHẤT LƯỢNG CAO<br />
+                RICE CITY LONG CHÂU
+            </h2>
+
+            <div class="space-y-8 text-[15px] leading-relaxed text-gray-700">
+
+                <!-- A -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        A. Q&A VỀ QUY HOẠCH – CHỈ TIÊU XÂY DỰNG
+                    </h3>
+
+                    <p><b>1. Tổng diện tích khu đất xây dựng dự án là bao nhiêu?</b></p>
+                    <p>Trả lời: Tổng diện tích khu đất xây dựng dự án Rice City Long Châu là 60.355 m², được quy hoạch
+                        đồng bộ theo quy hoạch chi tiết được cơ quan có thẩm quyền phê duyệt.</p>
+
+                    <p class="mt-4"><b>2. Mật độ xây dựng của dự án là bao nhiêu?</b></p>
+                    <p>Trả lời: Mật độ xây dựng toàn khu dự án là 31,4%, tuân thủ đúng quy chuẩn xây dựng đối với dự án
+                        nhà ở xã hội, đảm bảo không gian sống thông thoáng và quỹ đất cho cây xanh, giao thông nội bộ.
+                    </p>
+
+                    <p class="mt-4"><b>3. Dự án gồm bao nhiêu tòa nhà?</b></p>
+                    <p>Trả lời: Dự án gồm 03 tòa nhà chung cư NOXH ký hiệu CT1 – CT2 – CT3, được bố trí khoa học, đảm
+                        bảo khoảng lùi, ánh sáng và thông gió tự nhiên cho các căn hộ.</p>
+
+                    <p class="mt-4"><b>4. Chiều cao công trình và số tầng của mỗi tòa là bao nhiêu?</b></p>
+                    <p>Trả lời: Mỗi tòa nhà cao 22 tầng nổi; tòa CT1 có 03 tầng hầm đỗ xe, tòa CT2 có 01 tầng hầm và 2
+                        tầng nổi đỗ xe, CT3 có 01 tầng hầm và 2 tầng nổi đỗ xe phù hợp với tiêu chuẩn an toàn xây dựng
+                        hiện hành.</p>
+
+                    <p class="mt-4"><b>5. Tổng số căn hộ NOXH của dự án là bao nhiêu?</b></p>
+                    <p>Trả lời: Dự án có tổng số 1980 căn hộ nhà ở xã hội mua và thuê mua, được thiết kế đa dạng về diện
+                        tích, phù hợp với nhu cầu của nhiều nhóm đối tượng.</p>
+                </section>
+
+                <!-- B -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        B. Q&A VỀ DIỆN TÍCH – THIẾT KẾ CĂN HỘ
+                    </h3>
+
+                    <p><b>6. Diện tích các căn hộ NOXH dao động trong khoảng bao nhiêu?</b></p>
+                    <p>Trả lời: Diện tích thông thủy căn hộ NOXH tại Rice City Long Châu dao động từ khoảng 32,31 m² đến
+                        77 m², đáp ứng quy định về diện tích tối thiểu và tối đa của nhà ở xã hội.</p>
+
+                    <p class="mt-4"><b>7. Căn hộ được thiết kế mấy phòng ngủ?</b></p>
+                    <p>Trả lời: Căn hộ được thiết kế chủ yếu gồm:</p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Căn 1 phòng ngủ</li>
+                        <li>Căn 2 phòng ngủ</li>
+                        <li>Căn 3 phòng ngủ</li>
+                    </ul>
+
+                    <p class="mt-2">Phù hợp với hộ gia đình nhỏ, gia đình trẻ và người lao động.</p>
+
+                    <p class="mt-4"><b>8. Thiết kế căn hộ có đảm bảo thông thoáng và chiếu sáng tự nhiên không?</b></p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Có cửa sổ, logia</li>
+                        <li>Đảm bảo thông gió và ánh sáng tự nhiên</li>
+                        <li>Phù hợp tiêu chuẩn nhà ở xã hội và quy chuẩn xây dựng Việt Nam</li>
+                    </ul>
+
+                    <p class="mt-4"><b>9. Căn hộ được bàn giao theo tiêu chuẩn nào?</b></p>
+
+                    <p>Trả lời: Căn hộ được bàn giao theo tiêu chuẩn chất lượng tương đương nhà ở thương mại, bao gồm:
+                    </p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Hoàn thiện sàn, trần, tường, cửa đi chính, cửa thông phòng, cửa sổ</li>
+                        <li>Đầu chờ điện nước khu vực bếp và logia</li>
+                        <li>Thiết bị vệ sinh theo danh mục công bố của chủ đầu tư</li>
+                    </ul>
+                </section>
+
+                <!-- C -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        C. Q&A VỀ HẠ TẦNG – KỸ THUẬT
+                    </h3>
+
+                    <p><b>10. Dự án có tầng hầm hoặc khu để xe không?</b></p>
+                    <p>Trả lời: Dự án được bố trí khu vực để xe riêng biệt (tầng hầm hoặc bãi xe theo quy hoạch), đáp
+                        ứng nhu cầu đỗ xe máy và ô tô của cư dân theo quy chuẩn.</p>
+
+                    <p class="mt-4"><b>11. Tỷ lệ chỗ đỗ xe được bố trí như thế nào?</b></p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>CT1: 242 chỗ ô tô, 936 chỗ xe máy</li>
+                        <li>CT2: 1233 chỗ xe máy</li>
+                        <li>CT3: 98 chỗ ô tô, 2447 chỗ xe máy</li>
+                    </ul>
+
+                    <p class="mt-4"><b>12. Hệ thống phòng cháy chữa cháy của dự án ra sao?</b></p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Báo cháy tự động</li>
+                        <li>Hệ thống chữa cháy theo tầng</li>
+                        <li>Lối thoát hiểm, thang thoát nạn</li>
+                    </ul>
+
+                    <p class="mt-4"><b>13. Hệ thống cấp điện, cấp nước được thiết kế như thế nào?</b></p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Điện: cấp từ lưới điện quốc gia</li>
+                        <li>Nước: cấp từ hệ thống nước đô thị</li>
+                        <li>Có máy phát điện dự phòng</li>
+                    </ul>
+                </section>
+
+                <!-- D -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        D. Q&A VỀ CÂY XANH – TIỆN ÍCH
+                    </h3>
+
+                    <p><b>14. Dự án có diện tích cây xanh không?</b></p>
+                    <p>Trả lời: Có. Dự án dành 62% diện tích cho cây xanh, đường dạo và không gian sinh hoạt chung.</p>
+
+                    <p class="mt-4"><b>15. Các tiện ích nội khu nổi bật:</b></p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Khu sinh hoạt cộng đồng</li>
+                        <li>Sân chơi trẻ em</li>
+                        <li>Đường dạo bộ</li>
+                        <li>Bể bơi, phòng gym</li>
+                        <li>Vườn dạo tầng mái</li>
+                        <li>Shophouse thương mại</li>
+                        <li>Nhà trẻ</li>
+                        <li>Siêu thị</li>
+                        <li>Camera an ninh</li>
+                        <li>Hệ thống đỗ xe tự động</li>
+                    </ul>
+                </section>
+
+                <!-- E -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        E. TIẾN ĐỘ XÂY DỰNG
+                    </h3>
+
+                    <ul class="list-disc ml-6">
+                        <li>Khởi công CT1: Quý 2/2025</li>
+                        <li>Khởi công CT2, CT3: Quý 4/2025</li>
+                        <li>Dự kiến bàn giao: Cuối Quý II – Đầu Quý III/2027</li>
+                    </ul>
+                </section>
+
+                <!-- F -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        F. GIÁ BÁN – THANH TOÁN
+                    </h3>
+
+                    <p>Giá bán căn hộ được xác định theo:</p>
+
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Quy định của Nhà nước về NOXH</li>
+                        <li>Không bao gồm phí bảo trì 2%</li>
+                    </ul>
+                    <p class="mt-4"><b>18. Phương thức thanh toán ra sao?</b></p>
+                    <p>
+                        Trả lời: Khách hàng thanh toán bằng hình thức chuyển khoản theo tiến độ xây dựng, chia
+                        thành 08 đợt, phù hợp với quy định và thông báo bán hàng của chủ đầu tư.
+                    </p>
+
+                    <p class="mt-4"><b>19. Người mua có được vay vốn ngân hàng không?</b></p>
+                    <p>
+                        Trả lời: Có. Người mua có thể vay vốn từ Ngân hàng BIDV. Chủ đầu tư đã ký HĐ hợp tác
+                        hỗ trợ khách hàng vay vốn mua NOXH.
+                    </p>
+                </section>
+
+                <!-- G -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        G. CÂU HỎI VỀ PHÁP LÝ – SỬ DỤNG CĂN HỘ
+                    </h3>
+
+                    <p><b>20. Khi nào căn hộ mua/thuê mua được cấp Giấy chứng nhận (sổ hồng)?</b></p>
+                    <p>Trả lời:</p>
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Hoàn thành nghĩa vụ tài chính</li>
+                        <li>Nhận bàn giao căn hộ</li>
+                        <li>Chủ đầu tư hoàn tất hồ sơ pháp lý xin cấp theo quy định</li>
+                    </ul>
+
+                    <p class="mt-4"><b>21. NOXH có được chuyển nhượng không?</b></p>
+                    <p>
+                        Trả lời: Có, sau 05 năm kể từ khi thanh toán đủ 100% giá trị căn hộ và sử dụng căn hộ
+                        đúng theo quy định của NOXH.
+                    </p>
+
+                    <p class="mt-4"><b>22. Có được cho thuê căn hộ NOXH không?</b></p>
+                    <p>
+                        Trả lời: Không được cho thuê căn hộ NOXH, hoặc không đúng mục đích đăng ký để ở. Sẽ có
+                        các đơn vị kiểm tra định kỳ trong suốt quá trình sinh sống trong 5 năm đầu tiên, để
+                        quản lý việc sử dụng NOXH đúng mục đích.
+                    </p>
+
+                    <p class="mt-4"><b>23. Thông tin chính thức của dự án được công bố ở đâu?</b></p>
+                    <p>Trả lời: Thông tin chính thức được công bố tại:</p>
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Website của chủ đầu tư: www.ricecitylongchau.com</li>
+                        <li>
+                            Văn phòng giao dịch dự án: Tầng 2, tòa nhà Rainbow, số 79 đường 19/5, KĐT mới Văn Quán,
+                            phường Hà Đông, Hà Nội
+                        </li>
+                        <li>Thông báo của cơ quan quản lý Nhà nước liên quan</li>
+                    </ul>
+                </section>
+
+                <!-- H -->
+                <section>
+                    <h3 class="font-bold text-lg text-gray-900 mb-4">
+                        H. Q&A KỸ THUẬT CĂN HỘ &amp; TÒA NHÀ
+                    </h3>
+
+                    <p><b>24. Có được cải tạo, sửa chữa căn hộ sau khi nhận nhà không?</b></p>
+                    <p>
+                        Trả lời: Khách hàng được phép cải tạo, sửa chữa bên trong căn hộ, với điều kiện:
+                    </p>
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Không làm thay đổi kiến trúc mặt ngoài</li>
+                        <li>Không làm thay đổi kết cấu chịu lực</li>
+                        <li>Không ảnh hưởng hệ thống kỹ thuật chung</li>
+                        <li>Thông báo và tuân thủ quy định của Ban quản lý tòa nhà</li>
+                    </ul>
+
+                    <!-- <p class="mt-4"><b>25. Hệ thống điện trong căn hộ có công tơ riêng không?</b></p> -->
+                </section>
+
+            </div>
+
+        </div>
+
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+    <!-- <script src="noxh.js"></script> -->
+</body>
+
+</html>

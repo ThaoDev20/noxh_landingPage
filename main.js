@@ -33,13 +33,13 @@ function initMenuLogic() {
 
 const menuItems = [
     { name: "Trang chủ", link: "home.html" },
-    { name: "Mặt bằng căn hộ", link: "#" },
-    { name: "Tiện ích nội khu", link:"#" },
-    { name: "Ảnh 360 tổng thể", link: "#" }, 
-    { name: "Tiến độ dự án", link: "#" },
-    { name: "Thông tin dự án", link: "#" },
-    { name: "Tin tức", link: "#" }, 
-    { name: "Q&A về dự án", link: "#" }
+    { name: "Mặt bằng căn hộ", link: "mat-bang-can-ho.html" },
+    { name: "Tiện ích nội khu", link:"tien-ich-noi-khu.html" },
+    { name: "Ảnh 360 tổng thể", link: "anh-360-tong-the.html" }, 
+    { name: "Tiến độ dự án", link: "tien-do-du-an.html" },
+    { name: "Thông tin dự án", link: "thong-tin-du-an.html" },
+    { name: "Tin tức", link: "tin-tuc.html" }, 
+    { name: "Q&A về dự án", link: "qa-du-an.html" }
 ];
 
     if (menuList) {
