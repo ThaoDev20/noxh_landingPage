@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closePopupBtn = document.getElementById("close-popup-btn");
   const registerForm = document.getElementById("register-form");
 
+  const submitBtn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const btnSpinner = document.getElementById("btnSpinner");
+
   const hasClosedPopup = localStorage.getItem("hasClosedPopup");
 
   if (popupOverlay && !hasClosedPopup) {
@@ -14,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closePopup() {
+    if (!popupOverlay) return;
     popupOverlay.classList.add("hidden");
     popupOverlay.classList.remove("flex");
     document.body.classList.remove("overflow-hidden");
@@ -38,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const hoTen = document.getElementById("hoTen").value.trim();
       const soDienThoai = document.getElementById("soDienThoai").value.trim();
-      const tinhThanh = document.getElementById("tinhThanh").value;
+      const canHo = document.getElementById("canHo").value;
       const ghiChu = document.getElementById("ghiChu").value.trim();
 
       if (!hoTen || !soDienThoai) {
@@ -49,9 +54,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = {
         hoTen,
         soDienThoai,
-        tinhThanh,
+        canHo,
         ghiChu,
       };
+
+      // Đổi trạng thái nút sang đang gửi
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+      }
+
+      if (btnText) {
+        btnText.textContent = "Đang gửi...";
+      }
+
+      if (btnSpinner) {
+        btnSpinner.classList.remove("hidden");
+      }
 
       try {
         const response = await fetch(
@@ -59,22 +78,77 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             method: "POST",
             body: JSON.stringify(data),
-          },
+          }
         );
 
         const result = await response.json();
 
         if (result.success) {
-          alert("Gửi thông tin thành công!");
+          if (btnText) {
+            btnText.textContent = "Đã gửi ✓";
+          }
+
+          if (btnSpinner) {
+            btnSpinner.classList.add("hidden");
+          }
+
           localStorage.setItem("hasClosedPopup", "true");
-          registerForm.reset();
-          closePopup();
+
+          setTimeout(() => {
+            registerForm.reset();
+            closePopup();
+
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+            }
+
+            if (btnText) {
+              btnText.textContent = "Gửi thông tin";
+            }
+          }, 1200);
         } else {
-          alert("Có lỗi khi lưu dữ liệu!");
+          if (btnText) {
+            btnText.textContent = "Gửi thất bại";
+          }
+
+          if (btnSpinner) {
+            btnSpinner.classList.add("hidden");
+          }
+
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+            }
+
+            if (btnText) {
+              btnText.textContent = "Gửi thông tin";
+            }
+          }, 1500);
+
           console.error(result);
         }
       } catch (error) {
-        alert("Không thể gửi dữ liệu. Vui lòng thử lại!");
+        if (btnText) {
+          btnText.textContent = "Gửi thất bại";
+        }
+
+        if (btnSpinner) {
+          btnSpinner.classList.add("hidden");
+        }
+
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+          }
+
+          if (btnText) {
+            btnText.textContent = "Gửi thông tin";
+          }
+        }, 1500);
+
         console.error(error);
       }
     });

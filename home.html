@@ -660,21 +660,19 @@
     <div id="footer-container"></div>
 
     <!-- Overlay -->
-    <div id="popup-overlay" class="fixed inset-0 bg-black/40 z-[999] hidden items-center justify-center px-4">
-        <!-- Popup -->
-        <div id="register-popup" class="relative w-full max-w-md bg-white rounded-3xl shadow-2xl p-6 md:p-8">
-            <!-- Nút đóng -->
+    <div id="popup-overlay" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/40 px-4">
+        <div id="register-popup"
+            class="relative w-full max-w-[360px] md:max-w-[420px] rounded-2xl bg-white shadow-2xl p-5 md:p-6">
             <button id="close-popup-btn"
-                class="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-black transition"
+                class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-black transition"
                 aria-label="Đóng popup">
-                <span class="text-3xl leading-none">&times;</span>
+                <span class="text-2xl leading-none">&times;</span>
             </button>
 
-            <!-- Icon -->
-            <div class="flex justify-center mb-5">
+            <div class="flex justify-center mb-3">
                 <div
-                    class="w-20 h-20 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center shadow-lg">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                    class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center shadow-md">
+                    <svg class="w-7 h-7 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15 19l-7 0a4 4 0 01-4-4l0-1a4 4 0 014-4l7 0a4 4 0 014 4l0 1a4 4 0 01-4 4z" />
@@ -683,60 +681,62 @@
                 </div>
             </div>
 
-            <!-- Tiêu đề -->
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-3">
+            <h2 class="text-xl md:text-2xl font-bold text-center text-blue-700 mb-1.5">
                 Đăng ký nhận thông tin
             </h2>
 
-            <p class="text-center text-gray-500 mb-8">
-                Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí
+            <p class="text-center text-sm md:text-base text-gray-500 mb-5">
+                Để lại thông tin để được tư vấn miễn phí
             </p>
 
-            <!-- Form -->
-            <form id="register-form" class="space-y-5">
+            <form id="register-form" class="space-y-4">
                 <div>
-                    <label class="block text-lg font-medium text-gray-800 mb-2">
+                    <label class="block text-sm md:text-base font-medium text-gray-800 mb-1.5">
                         Họ và tên <span class="text-red-500">*</span>
                     </label>
                     <input id="hoTen" type="text" placeholder="Nguyễn Văn A"
-                        class="w-full rounded-2xl border border-gray-300 px-4 py-4 outline-none focus:border-blue-500"
+                        class="w-full h-11 md:h-12 rounded-xl border border-gray-300 px-3.5 text-sm md:text-base outline-none focus:border-blue-500"
                         required />
                 </div>
 
                 <div>
-                    <label class="block text-lg font-medium text-gray-800 mb-2">
+                    <label class="block text-sm md:text-base font-medium text-gray-800 mb-1.5">
                         Số điện thoại <span class="text-red-500">*</span>
                     </label>
                     <input id="soDienThoai" type="text" placeholder="0912345678"
-                        class="w-full rounded-2xl border border-gray-300 px-4 py-4 outline-none focus:border-blue-500"
+                        class="w-full h-11 md:h-12 rounded-xl border border-gray-300 px-3.5 text-sm md:text-base outline-none focus:border-blue-500"
                         required />
                 </div>
 
                 <div>
-                    <label class="block text-lg font-medium text-gray-800 mb-2">
-                        Tỉnh thành quan tâm
+                    <label class="block text-sm md:text-base font-medium text-gray-800 mb-1.5">
+                        Căn hộ quan tâm
                     </label>
-                    <select id="tinhThanh"
-                        class="w-full rounded-2xl border border-gray-300 px-4 py-4 outline-none focus:border-blue-500 bg-white">
-                        <option value="">-- Chọn tỉnh --</option>
-                        <option>Bắc Ninh</option>
-                        <option>Hà Nội</option>
-                        <option>Hải Phòng</option>
-                        <option>Quảng Ninh</option>
+                    <select id="canHo"
+                        class="w-full h-11 md:h-12 rounded-xl border border-gray-300 px-3.5 text-sm md:text-base outline-none focus:border-blue-500 bg-white">
+                        <option value="">-- Chọn căn hộ --</option>
+                        <option>2 Phòng Ngủ</option>
+                        <option>3 Phòng Ngủ</option>
                     </select>
                 </div>
 
                 <div>
-                    <label class="block text-lg font-medium text-gray-800 mb-2">
+                    <label class="block text-sm md:text-base font-medium text-gray-800 mb-1.5">
                         Ghi chú
                     </label>
-                    <textarea id="ghiChu" rows="4" placeholder="Nhu cầu cụ thể, thời gian mong muốn..."
-                        class="w-full rounded-2xl border border-gray-300 px-4 py-4 outline-none focus:border-blue-500 resize-none"></textarea>
+                    <textarea id="ghiChu" rows="3" placeholder="Nhu cầu cụ thể, thời gian mong muốn..."
+                        class="w-full rounded-xl border border-gray-300 px-3.5 py-3 text-sm md:text-base outline-none focus:border-blue-500 resize-none"></textarea>
                 </div>
 
-                <button type="submit"
-                    class="w-full bg-[#1f5fbf] hover:bg-[#184d9b] text-white font-semibold py-4 rounded-2xl transition">
-                    Gửi thông tin
+                <button id="submitBtn" type="submit"
+                    class="w-full h-11 md:h-12 rounded-xl bg-[#1f5fbf] hover:bg-[#184d9b] text-white font-semibold text-sm md:text-base transition flex items-center justify-center gap-2">
+                    <span id="btnText">Gửi thông tin</span>
+
+                    <svg id="btnSpinner" class="w-4 h-4 animate-spin hidden" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="4" class="opacity-25"></circle>
+                        <path d="M22 12a10 10 0 00-10-10" stroke="white" stroke-width="4" stroke-linecap="round"
+                            class="opacity-90"></path>
+                    </svg>
                 </button>
             </form>
         </div>
