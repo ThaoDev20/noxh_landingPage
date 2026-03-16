@@ -2,82 +2,6 @@
 <html lang="vi">
 
 <body>
-    <!-- <header>
-        <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-1-3"> <input type="hidden" id="mobileWidth" value="5000">
-                <div id="mainMenu" class="menu-wrapper"> <a href="#" class="custom-toggle" id="toggle"
-                        aria-label="toggle"> <s class="bar"></s> <s class="bar"></s> <s class="bar"></s> </a>
-                    <div class="pure-menu pure-menu-vertical custom-can-transform" style="visibility: hidden;"> <a
-                            href="/">
-                            <div class="p-2 mobile-menu-header" style="height: 75px"> <img
-                                    src="https://ricecitylongchau.com/storage/photos/shares/config/logo_white.png"
-                                    alt="logo"> </div>
-                        </a>
-                        <ul class="pure-menu-list justify-content-center">
-                            <li class="pure-menu-item lv1   pure-menu-selected"> <a href="https://ricecitylongchau.com"
-                                    class="pure-menu-link"> Trang chủ </a> </li>
-                            <li class="pure-menu-item lv1"> <a href="https://ricecitylongchau.com/mat-bang-can-ho"
-                                    class="pure-menu-link pure-menu-selected"> Mặt bằng căn hộ </a> </li>
-                            <li class="pure-menu-item lv1"> <a href="https://ricecitylongchau.com/tien-ich-noi-khu"
-                                    class="pure-menu-link"> Tiện ích nội khu </a> </li>
-                            <li class="pure-menu-item lv1"> <a
-                                    href="https://ricecitylongchau.com/anh-360-tong-the-du-an" class="pure-menu-link">
-                                    Ảnh 360 tổng thể dự án </a> </li>
-                            <li class="pure-menu-item lv1"> <a href="https://ricecitylongchau.com/tien-do-du-an"
-                                    class="pure-menu-link"> Tiến độ dự án </a> </li>
-                            <li class="pure-menu-item lv1"> <a href="https://ricecitylongchau.com/thong-tin-du-an"
-                                    class="pure-menu-link"> Thông tin dự án </a> </li>
-                            <li class="pure-menu-item lv1"> <a href="https://ricecitylongchau.com/tin-tuc"
-                                    class="pure-menu-link"> Tin tức </a> </li>
-                            <li class="pure-menu-item lv1"> <a
-                                    href="/qa-du-an-nha-o-xa-hoi-chat-luong-cao-rice-city-long-chau"
-                                    class="pure-menu-link"> Q&amp;A về dự án </a> </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="pure-u-1-3 pure-u-sm-1-3">
-                <div class="text-center" id="logo-area"> <a href="https://ricecitylongchau.com"> <img
-                            src="https://ricecitylongchau.com/storage/photos/shares/config/logo-rice.png" alt="logo">
-                    </a> </div>
-            </div>
-            <div class="pure-u-2-3 pure-u-sm-1-3">
-                <div id="regis-area">
-                    <div class="tiendo-area"> <button class="btn-tiendo"> Tiến độ dự án </button>
-                        <ul>
-                            <li><a href="/tien-do-du-an-noxh">Nhà ở xã hội</a></li>
-                        </ul>
-                    </div> <a href="/nop-ho-so-scan-demo-tinh-nang"> </a>
-                </div><a href="/nop-ho-so-scan-demo-tinh-nang"> </a>
-            </div><a href="/nop-ho-so-scan-demo-tinh-nang"> </a>
-        </div><a href="/nop-ho-so-scan-demo-tinh-nang"> </a>
-    </header><a href="/nop-ho-so-scan-demo-tinh-nang"> </a> -->
-    <!-- <section id="breadcrumb"><a href="/nop-ho-so-scan-demo-tinh-nang"> </a>
-        <div class="container"><a href="/nop-ho-so-scan-demo-tinh-nang">
-            </a>
-            <nav class="me-2 ms-2" aria-label="breadcrumb"><a href="/nop-ho-so-scan-demo-tinh-nang">
-                </a>
-                <ol class="breadcrumb mt-0" itemscope="" itemtype="http://schema.org/BreadcrumbList"><a
-                        href="/nop-ho-so-scan-demo-tinh-nang">
-                    </a>
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope=""
-                        itemtype="http://schema.org/ListItem"><a href="/nop-ho-so-scan-demo-tinh-nang">
-                        </a><a itemprop="item" href="https://ricecitylongchau.com">
-                            <span itemprop="name"> Home </span>
-                        </a>
-                        <meta itemprop="position" content="1">
-                    </li>
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope=""
-                        itemtype="http://schema.org/ListItem">
-                        <a itemprop="item" href="https://ricecitylongchau.com/mat-bang-can-ho">
-                            <span itemprop="name">Mặt bằng căn hộ</span>
-                        </a>
-                        <meta itemprop="position" content="2">
-                    </li>
-                </ol>
-            </nav>
-        </div>
-    </section> -->
 
     <head>
         <meta charset="UTF-8" />
@@ -258,48 +182,66 @@
             }
         }
     </style>
-    <section class="relative h-[184px] bg-[#f5f5f5] overflow-hidden">
+    <section class="relative h-[170px] md:h-[184px] bg-[#fafafa] overflow-hidden">
         <div
             class="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
         </div>
 
         <!-- Hàng trên -->
-        <div class="relative z-10 flex items-start justify-between px-7 pt-5">
-            <!-- Nút menu -->
+        <div class="relative z-10 flex items-center justify-between px-4 pt-4 md:px-7 md:pt-5">
 
+            <!-- Menu -->
+            <div id="menu-container" class="flex items-center shrink-0"></div>
 
-            <!-- Logo -->
-            <a href="home.html" class="absolute left-1/2 -translate-x-1/2 top-5">
-                <img src="assets/logo-rice.png" alt="Logo" class="h-24 w-auto object-contain" />
-            </a>
-
-            <!-- Nút tiến độ dự án -->
-            <div id="project-progress-container" class="shrink-0">
-                <button class="bg-[#bda66d] text-white px-8 h-14 text-[16px] font-medium hover:opacity-90 transition">
+            <!-- Nút tiến độ -->
+            <div id="project-progress-container" class="flex items-center shrink-0">
+                <button
+                    class="bg-[#bda66d] text-white px-4 md:px-8 h-10 md:h-14 text-[13px] md:text-[16px] font-medium hover:opacity-90 transition whitespace-nowrap">
                     Tiến độ dự án
                 </button>
             </div>
+
+            <!-- Logo -->
+            <a href="home.html" class="flex items-center md:absolute md:left-1/2 md:top-5 md:-translate-x-1/2">
+                <img src="assets/logo-rice.png" alt="Logo" class="h-12 md:h-24 w-auto object-contain" />
+            </a>
         </div>
 
-        <!-- Chữ phía dưới -->
-        <div class="absolute bottom-4 left-[312px] md:left-[312px]">
-            <p class="text-[#222] text-[16px] leading-none">
-                Home <span class="mx-2">/</span> Mặt bằng căn hộ
+        <!-- Breadcrumb -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 md:left-[312px] md:translate-x-0 px-4">
+            <p class="text-[#222] text-[13px] md:text-[16px] leading-none text-center md:text-left">
+                <a href="home.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <span>Mặt bằng căn hộ</span>
             </p>
         </div>
     </section>
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div>
+        </div>
 
-    <div id="menu-container"></div>
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
 
     <div id="scroll-top-btn"
         class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
     </div>
 
-
     <article data-layout="1col" id="mainContent" style="display: block">
         <div data-id="s1736874572" class="s1736874572 sectag matbang-canho">
-            <div class="pure-g flex">
-                <div class="pure-u-1 pure-u-md-4-5 w-2/3">
+            <div class="pure-g flex md:flex-row flex-col">
+                <div class="pure-u-1 pure-u-md-4-5 md:w-2/3 w-full">
                     <div id="buildings-img">
                         <picture>
                             <source media="(min-width:1200px)" srcset="
@@ -1830,7 +1772,7 @@
                         </picture>
                     </div>
                 </div>
-                <div class="pure-u-1 pure-u-md-1-5 w-1/3">
+                <div class="pure-u-1 pure-u-md-1-5 md:w-1/3 w-full">
                     <div class="sbar">
                         <label for="">Toà nhà</label>
                         <ul id="building">
@@ -2376,93 +2318,13 @@
                 </div>
             </div>
         </div>
-
-
-
     </article>
-    <div class="w-full bg-[#f6f4f1] md:p-12.5 px-8">
-        <div class="md:max-w-360 mx-auto w-full flex ">
-            <div class="flex flex-col md:flex-row justify-between gap-10 pb-10">
-                <div class="flex-1">
-                    <h3 class="font-bold text-[#1a365d] text-lg mb-3 uppercase">
-                        Liên danh Công ty cổ phần Himlam Thủ đô và Công ty cổ phần BIC
-                        Việt Nam
-                    </h3>
-                    <div class="text-[14.5px] leading-relaxed">
-                        <p class="font-semibold mb-1">Văn phòng đại diện:</p>
-                        <p class="mb-2 text-gray-500">
-                            Tầng 2, tòa nhà Rainbow, số 79 đường 19/5, KĐT Văn Quán,
-                            phường Hà Đông, tp. Hà Nội
-                        </p>
-                        <p class="text-gray-500 text-[14.5px]">
-                            <span class="font-medium">www.bicvietnam.com</span>
-                            <span class="mx-1">/</span>
-                            <span class="font-medium">www.ricecitylongchau.com</span>
-                            <span class="mx-1">/</span>
-                            <span class="text-gray-500 font-medium">
-                                Email: info@ricecitylongchau.com
-                            </span>
-                        </p>
-                    </div>
-                </div>
 
-                <div class="w-full md:w-62.5">
-                    <h4 class="font-bold text-gray-700 mb-4">
-                        Một sản phẩm của BIC Việt Nam
-                    </h4>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#" class="flex items-center group">
+    <!-- Footer-->
+    <footer id="main-footer" class=" text-[#444] pt-10   font-sans border-t border-gray-200">
+        <div id="footer-container"></div>
 
-                                <i class="bi bi-facebook mr-2 text-xl"></i>
-                                <span class="text-sm">Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center group">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="mr-2">
-                                    <path
-                                        d="M3.33333 1.66699V15.7445C3.33333 16.192 3.03167 16.592 2.64667 16.6553C2.39667 16.6945 2.15 16.6303 1.96083 16.4687C1.77417 16.3103 1.66667 16.0787 1.66667 15.8337V10.8337H0V15.8337C0 16.5678 0.320833 17.262 0.880833 17.7387C1.335 18.1245 1.90833 18.3328 2.5 18.3337H15.8333C17.2117 18.3337 18.3333 17.2128 18.3333 15.8337V1.66699H3.33333ZM15 15.0003H6.66667V13.3337H15V15.0003ZM15 11.667H6.66667V10.0003H15V11.667ZM15 8.33366H6.66667V5.00033H15V8.33366Z"
-                                        fill="#212121"></path>
-                                </svg>
-                                <span class="text-sm font-medium">
-                                    Tin tức & Sự kiện
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-gray-300 mb-8" />
-            <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
-                <div class="flex flex-col sm:flex-row items-center gap-6">
-                    <div class="flex items-center gap-4 border-r-0 sm:border-r border-gray-300 pr-0 sm:pr-6">
-
-                        <div class="flex flex-col items-center">
-                            <img src="./assets/logo-footer.png" alt="logo-bic" class="w-60 h-20">
-                        </div>
-                    </div>
-                    <p class="text-sm text-[#1a365d] font-semibold">
-                        Quyền sở hữu © 2024 thuộc về Himlam Thủ Đô và BIC Việt Nam
-                    </p>
-                </div>
-
-                <div class="flex divide-x divide-gray-300 text-sm">
-                    <div class="px-6 flex flex-col items-center">
-                        <span class="text-gray-500">Số người đã truy cập</span>
-                        <span class="text-2xl font-bold text-gray-700">
-                            718,927
-                        </span>
-                    </div>
-                    <div class="px-6 flex flex-col items-center">
-                        <span class="text-gray-500">Số người đang truy cập</span>
-                        <span class="text-2xl font-bold text-gray-700">2</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </footer>
 
     <script rel="preload" type="text/javascript" src="https://ricecitylongchau.com/js/frontend.js"></script>
     <script id="scriptLayout">
@@ -2508,7 +2370,6 @@
                     }
                 },
             });
-
         });
 
         if (typeof AppCode == "undefined") {
@@ -2665,6 +2526,7 @@
         integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
         data-cf-beacon='{"version":"2024.11.0","token":"c3e1ef7e22e54216af6f322ec8098a6c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
         crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
