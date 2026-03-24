@@ -32,7 +32,7 @@ function initMenuLogic() {
     const menuList = document.getElementById('menu-list');
 
 const menuItems = [
-    { name: "Trang chủ", link: "home.html" },
+    { name: "Trang chủ", link: "index.html" },
     { name: "Mặt bằng căn hộ", link: "#" },
     { name: "Tiện ích nội khu", link:"#" },
     { name: "Ảnh 360 tổng thể", link: "#" }, 
