@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin dự án</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/banner_noxh_vietthang.png&quot;)">
+        <div
+            class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <!-- <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="index.html">
+            <img src="assets/logo_white.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a> -->
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class=" text-white text-sm md:text-base font-bold leading-snug">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <span>Thông tin dự án</span>
+            </p>
+            <p class="text-white text-2xl md:text-5xl font-bold leading-snug mt-4 md:mt-6">
+                Thông tin dự án
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <!-- <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div> -->
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] pt-10 font-sans border-t border-gray-200">
+        <div class="max-w-[1300px] mx-auto px-6 py-10 ">
+            <!-- Mô tả đầu trang -->
+            <div class="max-w-[1300px] mx-auto mb-10">
+                <p class="text-[20px] md:text-[36px] leading-[1.45] text-[#1f1f1f] font-normal">
+                    Noxh Việt Thắng là dự án mới nhất đánh dấu sự trở lại của Công ty TNHH Việt Thắng với dòng sản
+                    phẩm NOXH chất lượng cao mang thương hiệu
+                    Việt Thắng. Sở hữu vị thế "Minh đường tụ thủy" kề bên quần thể công viên Tuổi Trẻ,
+                    hội tụ những giá trị sống ưu việt, dự án hứa hẹn là chốn an cư lý tưởng dành cho các
+                    cư dân tương lai.
+                </p>
+            </div>
+
+            <!-- Grid thông tin -->
+            <div
+                class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 text-[20px] leading-relaxed text-[#2b2b2b]">
+
+                <!-- Cột trái -->
+                <div class="space-y-8">
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Chủ đầu tư</h3>
+                        <p>Công ty TNHH Việt Thắng </p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Văn phòng giao dịch</h3>
+                        <p>
+                            Số 59 Lê Hồng Phong, Phường Bắc Giang, Tỉnh Bắc Ninh
+                        </p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Vị trí</h3>
+                        <p>
+                            <!-- Lô đất CT1 - CT2 - CT3 - Khu nhà ở xã hội Thượng Thanh và đấu nối hạ tầng
+                            khu vực, P. Bồ Đề, TP. Hà Nội -->
+                        </p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Quy hoạch phê duyệt</h3>
+                        <!-- <ul class="space-y-1">
+                            <li>- Quyết định chủ trương đầu tư số 2110/QĐ-UBND ngày 03/5/2018</li>
+                            <li>- Quyết định giao đất số 4875/QĐ-UBND ngày 23/9/2024</li>
+                            <li>- Giấy phép xây dựng số: 45/GPXD ngày 11/11/2024</li>
+                        </ul> -->
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Quy mô</h3>
+                        <p>Tổng diện tích đất: 3.670 m2</p>
+                        <p>Diện tích xây dựng: 2.202 m2</p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Phạm vi sử dụng</h3>
+                        <!-- <p>3 Tòa căn hộ mua/ thuê mua/ thuê Nhà ở xã hội:</p>
+                        <p>Tòa CT1: 600 căn hộ</p>
+                        <p>Tòa CT2: 400 căn hộ</p>
+                        <p>Tòa CT3: 980 căn hộ</p>
+                        <p>Tổng số căn hộ: 1980 căn hộ</p> -->
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[14px] font-medium mb-2">Văn bản pháp luật</h3>
+                        <!-- <ul class="space-y-1">
+                            <li>- Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất
+                                số ... ngày ...</li>
+                            <li>- Giấy chứng nhận đăng ký đầu tư số .... do Sở Kế hoạch và Đầu tư Hà Nội cấp ngày ...
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+
+                <!-- Cột phải -->
+                <div class="space-y-8">
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Loại hình bất động sản</h3>
+                        <p>Nhà ở xã hội</p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[14px] font-medium mb-2">Mục đích sử dụng</h3>
+                        <p>
+                            Để ở (Đối với nhà ở xã hội), cho thuê hoặc kinh doanh
+                            (đối với diện tích thương mại dịch vụ)
+                        </p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Tiến độ xây dựng</h3>
+                        <!-- <p>Đang xây dựng phần móng</p> -->
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[14px] font-medium mb-2">Hình thức sở hữu</h3>
+                        <p>Lâu dài</p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Dự kiến bàn giao</h3>
+                        <!-- <p>Quý IV năm 2027</p> -->
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Loại căn hộ</h3>
+                        <p>2PN / 3PN </p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-2">Giá bán</h3>
+                        <p>Thông tin đang cập nhật</p>
+                    </div>
+
+                    <div class="border-l border-[#d7b77a] pl-4">
+                        <h3 class="text-[#c7a35f] uppercase text-[20px] font-medium mb-3">Đối tác</h3>
+
+                        <!-- <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[12px] text-[#666] mb-2">Tổng thầu xây dựng &amp; Quản lý vận hành</p>
+                                <div class="bg-white border border-gray-200 h-[72px] flex items-center justify-center">
+                                    <img src="https://ricecitylongchau.com/storage/photos/shares/project/Logo_MSC.png"
+                                        alt="MSC" class="max-h-12 object-contain" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <p class="text-[12px] text-[#666] mb-2">Đơn vị thiết kế</p>
+                                <div class="bg-white border border-gray-200 h-[72px] flex items-center justify-center">
+                                    <img src="https://ricecitylongchau.com/storage/photos/shares/project/cubic.png"
+                                        alt="CUBIC" class="max-h-12 object-contain" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <p class="text-[12px] text-[#666] mb-2">Đơn vị giám sát</p>
+                                <div class="bg-white border border-gray-200 h-[72px] flex items-center justify-center">
+                                    <img src="https://ricecitylongchau.com/storage/photos/shares/project/texo.png"
+                                        alt="TEXO" class="max-h-12 object-contain" />
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

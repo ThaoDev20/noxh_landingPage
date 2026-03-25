@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiện ích nội khu</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/banner_noxh_vietthang.png&quot;)">
+        <div
+            class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <!-- <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="index.html">
+            <img src="assets/logo-rice.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a> -->
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class="text-white text-sm md:text-xl font-bold leading-snug">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <span>Tiện ích nội khu</span>
+            </p>
+            <p class="text-white text-xl md:text-6xl font-bold leading-snug mt-4 md:mt-6">
+                Tiện ích nội khu
+            </p>
+            <p
+                class="text-white text-sm md:text-2xl font-bold leading-snug mt-4 md:mt-6 text-center max-w-[250px] md:max-w-md mx-auto">
+                Trọn đam mê trong những không gian sống thường ngày
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <!-- <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div> -->
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] pt-10 font-sans border-t border-gray-200 bg-[#f3f3f3]">
+        <div class="w-full bg-[#f3f3f3] py-20 px-6">
+            <div class="max-w-[1280px] mx-auto">
+                <h2 class="max-w-[1280px] text-[34px] md:text-[40px] leading-[1.35] font-normal text-[#12345b] mb-14">
+                    Với mong muốn nuôi dưỡng những tâm hồn trẻ thơ và xoa dịu bộn bề cuộc sống,
+                    Việt Thắng giới thiệu tiện ích sáng tạo và ngập tràn cảm hứng, khởi đầu hành trình
+                    trọn đam mê trong những không gian sống thường ngày của bạn.
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-4">
+                    <!-- Cột trái -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                1
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Bể bơi tầng mái</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                2
+                            </div>
+                            <!-- <span class="text-[20px] text-[#12345b]">Giếng cổ</span> -->
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                3
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Vườn dạo bộ</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                4
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Vườn dạo bộ</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                5
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Sân chơi trẻ em</span>
+                        </div>
+                    </div>
+
+                    <!-- Cột phải -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                6
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Sân tập thể dục thể thao</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                7
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Siêu Thị</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                8
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Hành lang ngoài</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                9
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Lối vào tầng hầm</span>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#bca46b] text-white flex items-center justify-center text-[18px] font-semibold">
+                                10
+                            </div>
+                            <span class="text-[20px] text-[#12345b]">Hồ Tuổi Trẻ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="https://ricecitylongchau.com/storage/photos/shares/map/Map_tienichnoikhu.jpg" alt="Logo" />
+        <div data-id="s1740794064" class="s1740794064 sectag ifram-vr360"
+            style=" background-color:#FFFFFFFF; padding:3rem 0;">
+            <iframe src="https://vr360.ai.vn/vr360-rice-city-long-chau/" width="100%" height="800"
+                style="border: none;"></iframe>
+        </div> -->
+
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

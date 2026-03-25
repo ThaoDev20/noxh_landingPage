@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hướng dẫn chuẩn bị hồ sơ đăng ký mua nhà ở xã hội - Việt Thắng</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/banner_noxh_vietthang.png&quot;)">
+        <div
+            class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <!-- <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="index.html">
+            <img src="assets/logo_white.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a> -->
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class=" text-white text-sm md:text-xl font-bold leading-snug">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <span>Tin Tức</span>
+                <span class="mx-2">/</span>
+                <span>Hướng dẫn chuẩn bị hồ sơ đăng ký mua nhà ở xã hội</span>
+            </p>
+            <p class="text-white text-2xl md:text-5xl font-bold leading-snug mt-4 md:mt-6">
+                Hướng dẫn chuẩn bị hồ sơ đăng ký mua nhà ở xã hội
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <!-- <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div> -->
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] pt-10 font-sans border-t border-gray-200">
+        <div class="max-w-[1300px] mx-auto px-3 py-5 ">
+            <div class="py-5">
+
+                <div class="max-w-4xl mx-auto overflow-hidden">
+                    <div class="relative w-full h-[400px]">
+                        <img src="assets/banner_noxh_vietthang.png" alt="Rice City Long Châu"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="p-8 text-gray-800 leading-relaxed text-sm md:text-base">
+                        <p class="mb-6">
+                            Nhằm hướng dẫn chi tiết để Quý khách hàng có thể tự hoàn thiện bộ hồ sơ để đăng ký mua bất
+                            kỳ dự án NOXH nào trên địa bàn Thành phố Hà Nội, mà không phải qua bất cứ khâu trung gian
+                            nào. Công ty Cổ phần BIC Việt Nam hướng dẫn Quý khách hoàn thiện bộ hồ sơ cập nhật từ tháng
+                            08/2024 như sau:
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <p class="font-bold">Hướng dẫn hoàn thiện hồ sơ mua NOXH: download <a href="#"
+                                    class="text-red-600 underline">tại đây</a></p>
+                            <p>- Mẫu 01 - Đơn đăng ký mua, thuê nhà ở xã hội <a href="#"
+                                    class="text-red-600 underline">tại đây</a></p>
+                            <p>- Mẫu 02 - Giấy xác nhận về đối tượng <a href="#" class="text-red-600 underline">tại
+                                    đây</a></p>
+                            <p>- Mẫu 03 - Giấy xác nhận điều kiện nhà ở (chưa có nhà ở) <a href="#"
+                                    class="text-red-600 underline">tại đây</a></p>
+                            <p>- Mẫu 04 - Giấy xác nhận điều kiện nhà ở (diện tích không đủ) <a href="#"
+                                    class="text-red-600 underline">tại đây</a></p>
+                            <p>- Mẫu 05 - Giấy xác nhận điều kiện thu nhập (có HĐLĐ) <a href="#"
+                                    class="text-red-600 underline">tại đây</a></p>
+                            <p>- Mẫu 06 - Giấy xác nhận điều kiện thu nhập (không có HĐLĐ) <a href="#"
+                                    class="text-red-600 underline">tại đây</a></p>
+                        </div>
+
+                        <p class="mb-6 italic">
+                            Quý khách xin lưu ý: Hiện nay Công ty Cổ phần BIC Việt Nam chưa thu nhận hồ sơ cho các dự án
+                            NOXH do chúng tôi làm chủ đầu tư. Trên đây là các thông tin hướng dẫn hồ sơ cập nhật áp dụng
+                            tại tất cả các dự án NOXH khác trên địa bàn Hà Nội để quý khách tìm hiểu thêm thông tin.
+                            Ngoài ra việc nộp hồ sơ cũng như tư vấn hoàn thiện hồ sơ là hoàn toàn không mất chi phí. Quý
+                            khách hàng có nhu cầu mua NOXH do Công ty Cổ phần BIC Việt Nam làm chủ đầu tư, xin liên hệ:
+                        </p>
+
+                        <div class="space-y-2 border-t pt-6">
+                            <p class="font-bold text-blue-900 uppercase">Công ty TNHH Việt Thắng</p>
+                            <p><span class="font-semibold">Số 59 Lê Hồng Phong, phường Bắc Giang, tỉnh Bắc Ninh</span>
+                            </p>
+                            <!-- <p><span class="font-semibold">Hotline:</span> <span class="text-red-600">08.8888.5885 -
+                                    0934.88.00.66</span></p>
+                            <p><span class="font-semibold">Email:</span> <a href="mailto:info@bicvietnam.com"
+                                    class="text-blue-600">info@bicvietnam.com</a></p> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="vi">
+
+<body>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mặt bằng căn hộ</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <style>
+            #mobile-menu {
+                transition:
+                    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                    opacity 0.5s;
+            }
+
+            .menu-item {
+                transition: all 0.5s;
+            }
+        </style>
+    </head>
+
+    <div id="libArea"></div>
+    <style id="cssArea">
+        .matbang-canho {
+            border-top: 50px solid #b8a77a;
+        }
+
+        .matbang-canho #buildings-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .matbang-canho #buildings-img .building-img,
+        .matbang-canho #buildings-img .item-img {
+            height: calc(100vh - 100px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .matbang-canho #buildings-img .building-img {
+            display: none;
+        }
+
+        .matbang-canho #buildings-img .building-img.item0 {
+            display: block;
+        }
+
+        .matbang-canho #buildings-img .item-img {
+            display: none;
+        }
+
+        .matbang-canho #building {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .matbang-canho #building li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .matbang-canho #building li .building-name {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-top: 10px;
+            color: #b3b3b3;
+        }
+
+        .matbang-canho #building li .building-name.active {
+            color: #000;
+        }
+
+        .matbang-canho #floor .floor-name {
+            font-size: 25px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .matbang-canho .item-floor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .matbang-canho .item-floor img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .matbang-canho .sbar {
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1921568627);
+            width: 100%;
+            padding: 80px 20px;
+            font-size: 16px;
+        }
+
+        .matbang-canho .sbar .select-input .inner {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .matbang-canho .sbar .select-input .inner select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid rgba(0, 0, 0, 0.1921568627);
+        }
+
+        .matbang-canho #rooms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .matbang-canho #rooms .room {
+            flex: 1 1 calc(33.33% - 10px);
+        }
+
+        .matbang-canho #rooms .room button {
+            width: 100%;
+            padding: 10px 5px;
+            border: 1px solid rgba(0, 0, 0, 0.1921568627);
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .matbang-canho #rooms .room button:hover {
+            background-color: #f4f4f4;
+        }
+
+        @media (max-width: 768px) {
+            .matbang-canho {
+                height: auto;
+            }
+
+            .matbang-canho #buildings-img {
+                height: auto;
+            }
+
+            .matbang-canho #buildings-img .building-img,
+            .matbang-canho #buildings-img .item-img {
+                width: 100%;
+                height: auto;
+            }
+
+            .matbang-canho .sbar {
+                padding: 20px 10px;
+            }
+
+            .matbang-canho #building li .building-name {
+                font-size: 30px;
+            }
+
+            .matbang-canho #floor .floor-name {
+                font-size: 20px;
+            }
+        }
+
+        #breadcrumb {
+            background-color: #fafafa;
+        }
+
+        #breadcrumb ol {
+            padding: 8px 0;
+            padding-top: 150px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #breadcrumb ol {
+                padding-top: 100px;
+            }
+        }
+    </style>
+    <section class="relative h-[170px] md:h-[184px] bg-[#fafafa] overflow-hidden">
+        <div
+            class="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/50 via-white/20 to-transparent pointer-events-none z-0">
+        </div>
+
+        <!-- Hàng trên -->
+        <div class="relative z-10 flex items-center justify-between px-4 pt-4 md:px-7 md:pt-5">
+
+            <!-- Menu -->
+            <div id="menu-container" class="flex items-center shrink-0"></div>
+
+            <!-- Nút tiến độ -->
+            <div id="project-progress-container" class="flex items-center shrink-0">
+                <button
+                    class="bg-[#bda66d] text-white px-4 md:px-8 h-10 md:h-14 text-[13px] md:text-[16px] font-medium hover:opacity-90 transition whitespace-nowrap">
+                    Tiến độ dự án
+                </button>
+            </div>
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center md:absolute md:left-1/2 md:top-5 md:-translate-x-1/2">
+                <img src="assets/logo-rice.png" alt="Logo" class="h-12 md:h-24 w-auto object-contain" />
+            </a>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 md:left-[312px] md:translate-x-0 px-4">
+            <p class="text-[#222] text-[13px] md:text-[16px] leading-none text-center md:text-left">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <span>Mặt bằng căn hộ</span>
+            </p>
+        </div>
+    </section>
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <!-- <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div> -->
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <article data-layout="1col" id="mainContent" style="display: block">
+        <div data-id="s1736874572" class="s1736874572 sectag matbang-canho">
+            <div class="pure-g flex md:flex-row flex-col">
+                <div class="pure-u-1 pure-u-md-4-5 md:w-2/3 w-full">
+                    <div id="buildings-img">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="/assets/
+                    tangham.png
+                  " />
+                            <source media="(min-width:800px)" srcset="
+                    /assets/tangham.png
+                  " />
+                            <source media="(min-width:600px)" srcset="
+                    /assets/tangham.png
+                  " />
+                            <img src="/assets/tangham.png" loading="lazy" class="building-img item0" alt="banner"
+                                title="banner" style="display: block" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                    /assets/tang1.png
+                  " />
+                            <source media="(min-width:800px)" srcset="
+                    /assets/tang1.png
+                  " />
+                            <source media="(min-width:600px)" srcset="
+                    /assets/tang1.png
+                  " />
+                            <img src="/assets/tang1.png" loading="lazy" class="building-img item1" alt="banner"
+                                title="banner" style="display: none" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                    /assets/tang2.png
+                  " />
+                            <source media="(min-width:800px)" srcset="
+                    /assets/tang2.png
+                  " />
+                            <source media="(min-width:600px)" srcset="
+                    /assets/tang2.png
+                  " />
+                            <img src="/assets/tang2.png" loading="lazy" class="building-img item2" alt="banner"
+                                title="banner" style="display: none" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                    /assets/tang3.png
+                  " />
+                            <source media="(min-width:800px)" srcset="
+                    /assets/tang3.png
+                  " />
+                            <source media="(min-width:600px)" srcset="
+                    /assets/tang3.png
+                  " />
+                            <img src="/assets/tang3.png" loading="lazy" class="building-img item3" alt="banner"
+                                title="banner" style="display: none" />
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                    /assets/tang4.png
+                  " />
+                            <source media="(min-width:800px)" srcset="
+                    /assets/tang4.png
+                  " />
+                            <source media="(min-width:600px)" srcset="
+                    /assets/tang4.png
+                  " />
+                            <img src="/assets/tang4.png" loading="lazy" class="building-img item4" alt="banner"
+                                title="banner" style="display: none" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-5 md:w-1/3 w-full">
+                    <div class="sbar">
+                        <label for="">Tầng</label>
+                        <ul id="building">
+                            <li>
+                                <div data-building="0" class="building-name active">Hầm</div>
+                            </li>
+                            <li>
+                                <div data-building="1" class="building-name">1</div>
+                            </li>
+                            <li>
+                                <div data-building="2" class="building-name">2</div>
+                            </li>
+                            <li>
+                                <div data-building="3" class="building-name">3</div>
+                            </li>
+                            <li>
+                                <div data-building="4" class="building-name">4</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </article>
+
+    <!-- Footer-->
+    <footer id="main-footer" class=" text-[#444] pt-10   font-sans border-t border-gray-200">
+        <div id="footer-container"></div>
+
+    </footer>
+
+    <script rel="preload" type="text/javascript" src="https://ricecitylongchau.com/js/frontend.js"></script>
+    <script id="scriptLayout">
+        function throttle(func, limit) {
+            let inThrottle;
+            return function () {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => (inThrottle = false), limit);
+                }
+            };
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+            if (!header) return;
+
+            const handleScroll = throttle(() => {
+                if (window.scrollY > 200) {
+                    header.classList.add("small");
+                } else {
+                    header.classList.remove("small");
+                }
+            }, 100);
+
+            // window.addEventListener('scroll', handleScroll);
+        });
+        $("document").ready(function () {
+            function formatNumber(n) {
+                return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            $.ajax({
+                url: "/api/reportNumberVisitors",
+                type: "GET",
+                success: function (data) {
+                    $("#totalUsers").text(formatNumber(data.totalUsers));
+                    $("#activeUsers").text(formatNumber(data.activeUsers));
+                    if ($("#number_users").length > 0) {
+                        $("#number_users").text(formatNumber(data.activeUsers));
+                    }
+                },
+            });
+        });
+
+        if (typeof AppCode == "undefined") {
+            const AppCode = {};
+
+            AppCode.process = {
+                slug: "",
+
+                getSlug: function () {
+                    var slug = window.location.pathname;
+                    this.slug = slug.replace(/\//g, "");
+                },
+                getCode: function () {
+                    return localStorage.getItem("code_validator");
+                },
+                checkNeedCode: function () {
+                    let Root = this;
+                    $.ajax({
+                        headers: {
+                            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                        },
+                        url: "/api/checkNeedValidator",
+                        type: "POST",
+                        data: {
+                            slug: Root.slug,
+                        },
+                        success: function (data) {
+                            if (data.need == 1) {
+                                $("#mainContent").css("display", "none");
+                                $("#comSubmitCodeValidator").css("display", "block");
+                                Root.submitCode();
+                            } else {
+                                $("#comSubmitCodeValidator").css("display", "none");
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("Error loading content:", error);
+                        },
+                    });
+                },
+                submitCode: function () {
+                    let Root = this;
+                    $("#formSubmitCodeValidator").on("submit", function (e) {
+                        e.preventDefault();
+                        var code = $("#code").val();
+                        console.log("formSubmitCodeValidator " + code);
+                        localStorage.removeItem("code_validator");
+                        localStorage.setItem("code_validator", code);
+                        window.location.reload();
+                    });
+                },
+                validatorCode: function (code) {
+                    let Root = this;
+                    $.ajax({
+                        headers: {
+                            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                        },
+                        url: "/api/validatorCode/",
+                        type: "POST",
+                        data: {
+                            code: code,
+                            slug: Root.slug,
+                        },
+                        success: function (data) {
+                            if (data.status == 1) {
+                                $("#mainContent").css("display", "block");
+                                $("#comSubmitCodeValidator").css("display", "none");
+                            } else {
+                                $("#mainContent").css("display", "none");
+                                $("#comSubmitCodeValidator").css("display", "block");
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("Error loading content:", error);
+                        },
+                    });
+                },
+                init: function () {
+                    this.getSlug();
+                    if (this.slug != "") {
+                        code = this.getCode();
+                        if (code != null) {
+                            this.validatorCode(code);
+                            this.submitCode();
+                        } else {
+                            this.checkNeedCode();
+                            this.submitCode();
+                        }
+                    }
+                },
+            };
+            AppCode.process.init();
+        }
+    </script>
+    <script id="scriptArea">
+        $(document).ready(function () {
+            const target = document.querySelector(".matbang-canho");
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                });
+            } else {
+                console.error("Element with class .matbang-canho not found");
+            }
+            $(".building-name").on("click", function () {
+                const building = $(this).data("building");
+                $(".building-name").removeClass("active");
+                $(this).addClass("active");
+                $(".floor-name").css("display", "none");
+                $(".floor-name").eq(building).css("display", "block");
+                $(".room-wrap").css("display", "none");
+                $(".room-wrap").eq(building).css("display", "block");
+
+                $(".building-img").css("display", "none");
+                $(".building-img").eq(building).css("display", "block");
+
+                $(".item-img").css("display", "none");
+                $(".room").val(-1);
+            });
+
+            $(".room").on("change", function () {
+                var building = $(this).data("building");
+                var room = $(this).val();
+
+                building = parseInt(building);
+                room = parseInt(room);
+                if (room != -1) {
+                    $(".building-img").css("display", "none");
+                } else {
+                    $(".building-img").eq(building).css("display", "block");
+                }
+
+                $(".item-img").css("display", "none");
+                $(".floor" + building + ".room" + room).css("display", "flex");
+            });
+            $(".go-to-room").on("click", function () {
+                var building = $(this).data("building");
+                var room = $(this).data("room");
+
+                building = parseInt(building);
+                room = parseInt(room);
+                if (room != -1) {
+                    $(".building-img").css("display", "none");
+                } else {
+                    $(".building-img").eq(building).css("display", "block");
+                }
+                $(".item-img").css("display", "none");
+                $(".floor" + building + ".room" + room).css("display", "flex");
+            });
+        });
+    </script>
+    <script defer=""
+        src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+        integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+        data-cf-beacon='{"version":"2024.11.0","token":"c3e1ef7e22e54216af6f322ec8098a6c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
