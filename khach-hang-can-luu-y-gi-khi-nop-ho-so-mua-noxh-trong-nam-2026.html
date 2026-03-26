@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dự án NOXH Việt Thắng - Khách hàng cần lưu ý khi nộp hồ sơ mua nhà ở xã hội trong năm 2026</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/banner_noxh_vietthang.png&quot;)">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-0"></div>
+
+        <!-- <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="index.html">
+            <img src="assets/logo_white.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a> -->
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class="text-white text-sm md:text-xl font-bold leading-snug">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <span>Tin Tức</span>
+                <span class="mx-2">/</span>
+                <span>Khách hàng cần lưu ý khi nộp hồ sơ mua nhà ở xã hội trong năm 2026?</span>
+            </p>
+
+            <p class="text-white text-2xl md:text-3xl font-bold leading-snug mt-4 md:mt-6 uppercase">
+                Khách hàng cần lưu ý khi nộp hồ sơ mua nhà ở xã hội trong năm 2026?
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <!-- <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div> -->
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] pt-10 font-sans border-t border-gray-200">
+        <div class="bg-white p-4 md:p-10">
+
+            <article class="max-w-4xl mx-auto">
+                <p class="mb-6 text-justify">
+                    Trong năm 2026, chính sách về nhà ở xã hội (NOXH) tiếp tục được Nhà nước triển khai nhằm hỗ trợ đúng
+                    đối tượng có nhu cầu thực sự về chỗ ở, đặc biệt là người thu nhập thấp, công nhân, người lao động
+                    đang sinh sống tại khu vực đô thị. Tuy nhiên, để hồ sơ mua NOXH được xét duyệt thuận lợi, khách hàng
+                    cần nắm rõ các điểm mới trong quy định pháp luật, nhất là về điều kiện cư trú.
+                </p>
+
+                <h2 class="text-xl font-bold mb-4">1. Căn cứ pháp lý mới cần chú ý</h2>
+
+                <p class="mb-4">
+                    Ngày 31/7/2024, Bộ Xây dựng đã ban hành <strong class="font-bold">Thông tư số
+                        05/2024/TT-BXD</strong> quy định chi tiết một số điều của Luật Nhà ở. Trong đó, đáng chú ý là
+                    việc ban hành mẫu giấy tờ xác nhận về đối tượng được hưởng chính sách hỗ trợ NOXH.
+                </p>
+
+                <p class="mb-4">
+                    Theo Thông tư này, đối tượng là <strong class="font-bold">“người thu nhập thấp tại khu vực đô
+                        thị”</strong> khi làm hồ sơ phải <strong class="font-bold">kê khai thông tin đăng ký thường trú
+                        hoặc đăng ký tạm trú (là nơi thường trú hoặc nơi tạm trú mà người kê khai đang thường xuyên sinh
+                        sống) tại khu vực đô thị</strong> nơi có dự án NOXH đăng ký mua.
+                </p>
+
+                <p class="mb-8">
+                    Điều này có nghĩa là: <strong class="font-bold">chỉ có thu nhập tại đô thị là chưa đủ</strong>,
+                    người nộp hồ sơ bắt buộc phải chứng minh được <strong class="font-bold">tình trạng cư trú hợp pháp
+                        tại đô thị</strong> thông qua giấy xác nhận thường trú hoặc tạm trú.
+                </p>
+
+                <div class="rounded-lg overflow-hidden shadow-lg border border-gray-100">
+                    <img src="assets/banner_noxh_vietthang.png" alt="Phối cảnh dự án Việt Thắng"
+                        class="w-full h-auto object-cover">
+                </div>
+
+            </article>
+
+        </div>
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
