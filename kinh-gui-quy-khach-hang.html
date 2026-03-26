@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dự án NOXH Việt Thắng - Kính gửi Quý khách hàng!</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        #mobile-menu {
+            transition:
+                transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s;
+        }
+
+        .menu-item {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <section class="relative h-[60vh] bg-cover bg-center overflow-hidden"
+        style="background-image: url(&quot;assets/banner_noxh_vietthang.png&quot;)">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-0"></div>
+
+        <!-- <a class="absolute top-4 right-4 z-10 md:left-1/2 md:right-auto md:-translate-x-1/2 cursor-pointer"
+            href="index.html">
+            <img src="assets/logo_white.png" alt="Logo" class="h-16 w-auto object-contain md:h-25" />
+        </a> -->
+
+        <div class="relative z-10 cursor-pointer" id="project-progress-container"></div>
+
+        <div class="absolute bottom-20 left-1/2 z-10 w-full -translate-x-1/2 px-6 text-center">
+            <p class="text-white text-sm md:text-xl font-bold leading-snug">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <span class="mx-2">/</span>
+                <a href="tin-tuc.html" class="hover:text-gray-200 transition">Tin Tức</a>
+                <span class="mx-2">/</span>
+                <span>Kính gửi Quý khách hàng!</span>
+            </p>
+
+            <p class="text-white text-2xl md:text-5xl font-bold leading-snug mt-4 md:mt-6 uppercase">
+                Kính gửi Quý khách hàng!
+            </p>
+        </div>
+    </section>
+
+    <div id="menu-container"></div>
+
+    <div id="scroll-top-btn"
+        class="fixed bottom-20 right-10 z-50 text-white p-4 rounded-full hover:scale-105 cursor-pointer transition-all hidden">
+    </div>
+
+    <aside id="mobile-menu"
+        class="fixed left-0 top-0 z-50 h-screen w-70 bg-[#bead79] text-white shadow-2xl -translate-x-full opacity-95 rounded-r-3xl">
+        <div class="px-5 pt-7">
+            <!-- <div class="mb-8 w-fit">
+                <img src="assets/logo_white.png" alt="Logo White" class="h-14 w-auto object-contain" />
+            </div> -->
+        </div>
+
+        <button id="close-menu-btn"
+            class="hidden absolute -right-20 cursor-pointer top-10 flex h-12 w-12 items-center justify-center bg-[#c8b27a] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#d0bc87]">
+            <span class="text-4xl leading-none">&times;</span>
+        </button>
+
+        <nav class="px-5 pb-8">
+            <ul id="menu-list" class="space-y-1"></ul>
+        </nav>
+    </aside>
+
+    <footer id="main-footer" class=" text-[#444] pt-10 font-sans border-t border-gray-200">
+        <article class="max-w-4xl mx-auto px-6 py-10 font-sans text-gray-900 leading-relaxed">
+            <div class="space-y-4 mb-8">
+                <p>Kính gửi Quý khách hàng!</p>
+
+                <p>Chúng tôi chân thành cảm ơn sự quan tâm của Quý khách hàng đến dự án NOXH Việt Thắng.</p>
+
+                <p>
+                    Đây là Dự án đầu tiên áp dụng hình thức tiếp nhận hồ sơ qua trực tuyến. Vì vậy, dù đã cố gắng áp
+                    dụng các giải pháp công nghệ phù hợp xu thế chung, nhưng vẫn không tránh khỏi những bất tiện nhất
+                    định cho quý khách. Rất mong Quý khách hàng thông cảm, đóng góp ý kiến tích cực giúp chúng tôi hoàn
+                    thiện trong các Dự án tiếp theo.
+                </p>
+
+                <p>Chúng tôi trân trọng sự đồng hành, thấu hiểu của Quý khách.</p>
+
+                <p>
+                    Các quý khách đã có Mã cấp từ Chủ đầu tư, chưa mua Nhà ở xã hội, sẽ được ưu tiên đăng ký và nhận
+                    thông tin đầu tiên qua email cũng như những sự hỗ trợ khác từ Chủ đầu tư đối với các Dự án Nhà ở xã
+                    hội sắp triển khai ở trên. Chúng tôi sẽ gửi thông tin Dự án mới đến email của Quý khách hàng sớm
+                    nhất có thể.
+                </p>
+
+                <p>.</p>
+
+                <p>Xin hãy giữ liên lạc với chúng tôi.</p>
+                <p>Một lần nữa xin chân thành cảm ơn.</p>
+            </div>
+
+            <div class="w-full">
+                <img src="assets/banner_noxh_vietthang.png" alt="Phối cảnh NOXH Việt Thắng" class="w-full h-auto">
+            </div>
+        </article>
+        <div id="footer-container"></div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
